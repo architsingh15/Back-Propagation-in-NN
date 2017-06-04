@@ -1,4 +1,4 @@
-# Backprop on the Seeds Dataset
+# Backpropagation on the Seeds Dataset
 from random import seed
 from random import randrange
 from random import random
@@ -16,12 +16,12 @@ def load_csv(filename):
 			dataset.append(row)
 	return dataset
 
-# Convert string column to float
+# Convert the string column to float
 def str_column_to_float(dataset, column):
 	for row in dataset:
 		row[column] = float(row[column].strip())
 
-# Convert string column to integer
+# Convert the string column to integer
 def str_column_to_int(dataset, column):
 	class_values = [row[column] for row in dataset]
 	unique = set(class_values)
